@@ -1,5 +1,8 @@
 <?php 
 require_once __DIR__ . '/Model/Product.php';
+require_once __DIR__ . '/Model/Categories.php';
+require_once __DIR__ . '/Model/Type.php';
+require_once __DIR__ . '/data/db.php';
 ?>
 
 <!DOCTYPE html>
