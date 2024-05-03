@@ -17,8 +17,9 @@ class Categories extends Product{
   //? get
 
   public function getFullInfo(){
-    
+    echo parent::getProductInfo() . "$this->categoryName $this->brand";
     
   }
+  
 }
 ?>

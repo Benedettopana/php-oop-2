@@ -4,6 +4,7 @@ class Product{
   private $name;
   protected $price;
   public $disposability;
+  public $type;
   
   //? Costruttore
   public function __construct(string $_name, float $_price, bool $_disposability){
@@ -12,7 +13,6 @@ class Product{
     $this->setPrice($_price);
     $this->setDisposability($_disposability);
     
-
   }
   //? /Costruttore
 

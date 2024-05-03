@@ -4,13 +4,16 @@ require_once __DIR__ . '/Model/Categories.php';
 require_once __DIR__ . '/Model/Type.php';
 require_once __DIR__ . '/data/db.php';
 
-$prodotti = [
-  new Product('Croccantini per cuccioli taglia s', 4.99, true),
-  new Product('Croccantini per cuccioli taglia L', 7.99, true, 'Cibo', 'Mongi', 'Cane'),
-];
+$prodotti = [];
 
-var_dump($prodotti[0]->getProductInfo());
-var_dump($prodotti[1]);
+
+foreach($db as $product){
+  $prodotti[]=$product;
+}
+
+// var_dump($prodotti);
+// var_dump($prodotti[0]->getProductInfo());
+// var_dump($prodotti[1]);
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +26,27 @@ var_dump($prodotti[1]);
   <!-- link css -->
   <link rel="stylesheet" href="./css/my-style.css">
 
-  <title>PHP</title>
+  <title>E-commerce Animali</title>
 </head>
 <body>
   <div class="container my-5">
-
+    <div class="row row-cols-4 justify-content-center ">
+      <?php foreach($prodotti as $product): ?>
+        <div class="col my-5 mx-1 rounded-2 my-card"><?php $product->getProductInfo()?>
+        <p class="my-3">
+          <?php echo $product->categoryName ?? '-'?>
+        </p>
+        <p class="my-3">
+          <?php echo $product->brand ?? '-'?>
+        </p>
+        <p class="my-3">
+          <?php  $product->type?->getType() ?? '-'?>
+        </p>
+        
+        </div>
+      <?php endforeach;?>
+    </div>
+    
   </div>
 </body>
 </html>
