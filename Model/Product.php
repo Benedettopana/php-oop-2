@@ -6,7 +6,7 @@ class Product{
   public $disposability;
   
   //? Costruttore
-  public function __construct(string $_name, float $_price, bool $_disposability,){
+  public function __construct(string $_name, float $_price, bool $_disposability){
 
     $this->setName($_name);
     $this->setPrice($_price);
@@ -42,7 +42,17 @@ class Product{
   }
   //! Disponibilità
   public function getDisposability(){
-    return $this->disposability;
+    if($this->disposability){
+      echo 'Disponibile! ';
+    }else{
+      echo "Non Disponibile. ";
+    }
+    
+  }
+
+  //! Tutte le informazioni
+  public function getProductInfo(){
+    echo "$this->name $this->price " . $this->getDisposability();
   }
   //? /Getter
 }

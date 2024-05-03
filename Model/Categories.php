@@ -13,5 +13,12 @@ class Categories extends Product{
     // imposto il tipo di oggetto se cane gatto ecc..
     $this->type = $_type;
   }
+
+  //? get
+
+  public function getFullInfo(){
+    
+    
+  }
 }
 ?>

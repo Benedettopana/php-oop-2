@@ -3,6 +3,14 @@ require_once __DIR__ . '/Model/Product.php';
 require_once __DIR__ . '/Model/Categories.php';
 require_once __DIR__ . '/Model/Type.php';
 require_once __DIR__ . '/data/db.php';
+
+$prodotti = [
+  new Product('Croccantini per cuccioli taglia s', 4.99, true),
+  new Product('Croccantini per cuccioli taglia L', 7.99, true, 'Cibo', 'Mongi', 'Cane'),
+];
+
+var_dump($prodotti[0]->getProductInfo());
+var_dump($prodotti[1]);
 ?>
 
 <!DOCTYPE html>
