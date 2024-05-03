@@ -1,5 +1,5 @@
 <?php 
-
+require_once __DIR__ . '/Model/Product.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- link css -->
   <link rel="stylesheet" href="./css/my-style.css">
-  <style>
-    a{
-      --bs-link-color-rgb: white !important;
-      text-decoration: none !important;
-    }
-  </style>
+
   <title>PHP</title>
 </head>
 <body>
