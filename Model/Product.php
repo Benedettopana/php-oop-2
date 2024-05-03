@@ -36,7 +36,7 @@ class Product{
     return $this->name;
   }
   //! Prezzo
-  public function getPricereturn{
+  public function getPrice(){
     return $this->price;
   }
   //! Disponibilità
