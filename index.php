@@ -8,9 +8,18 @@ $prodotti = [];
 
 
 foreach($db as $product){
+  
   $prodotti[]=$product;
 }
 
+// ERRORI
+$productErr = new Product('Croccantini per cuccioli S', 5.99, true);
+try{
+  $productErr->setDisposability('sono disponibile');
+}catch(Exception $e){
+    var_dump($e->getMessage());
+}
+// var_dump($productErr);
 // var_dump($prodotti);
 // var_dump($prodotti[0]->getProductInfo());
 // var_dump($prodotti[1]);

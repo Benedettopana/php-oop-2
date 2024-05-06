@@ -27,7 +27,14 @@ class Product{
   }
   //! Disponibilità
   public function setDisposability($_disposability){
-    $this->disposability = $_disposability;
+
+    if(!is_bool($_disposability)){
+      throw new Exception('La disponibilità deve essere impostata su \'true\' o \'false\'');
+      
+    }else{
+
+      $this->disposability = $_disposability;
+    }
   }
   //? /Setter
 
