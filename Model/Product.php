@@ -1,10 +1,12 @@
 <?php 
 
+require_once __DIR__ . '/Recensioni.php';
 class Product{
   private $name;
   protected $price;
   public $disposability;
   public $type;
+  use Recensioni;
   
   //? Costruttore
   public function __construct(string $_name, float $_price, bool $_disposability){

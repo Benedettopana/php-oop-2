@@ -12,13 +12,24 @@ foreach($db as $product){
   $prodotti[]=$product;
 }
 
-// ERRORI
+
+
+//? TRAIT
+$productTrait = new Product('Ciotola per gatti', 7.50, false);
+$productTrait->nRecensioni = 131;
+$productTrait->star = 3;
+var_dump($productTrait->getRecensioni());
+
+//? /TRAIT
+
+//! ERRORI
 $productErr = new Product('Croccantini per cuccioli S', 5.99, true);
 try{
   $productErr->setDisposability('sono disponibile');
 }catch(Exception $e){
     var_dump($e->getMessage());
 }
+//! /ERRORI
 // var_dump($productErr);
 // var_dump($prodotti);
 // var_dump($prodotti[0]->getProductInfo());
